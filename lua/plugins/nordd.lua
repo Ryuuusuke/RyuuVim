@@ -1,3 +1,0 @@
-return {
-  { "gbprod/nord.nvim" },
-}

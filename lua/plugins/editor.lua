@@ -52,17 +52,22 @@ return {
         },
       },
       indent = {
-        scope = {
-          enabled = false,
-        },
-        chunk = {
+        enabled = true,
+        indent = {
           enabled = true,
-          char = {
-            corner_top = "╭",
-            corner_bottom = "╰",
-          },
-          hl = "MiniIconsPurple",
         },
+        scope = {
+          enabled = true,
+          char = "│",
+        },
+        -- chunk = {
+        --   enabled = true,
+        --   char = {
+        --     corner_top = "╭",
+        --     corner_bottom = "╰",
+        --   },
+        --   hl = "MiniIconsPurple",
+        -- },
       },
     },
   },
@@ -200,8 +205,8 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function(_, opts)
-      opts.options.section_separators = { right = "", left = "" }
-      opts.options.component_separators = { right = "", left = "" }
+      opts.options.section_separators = { right = "", left = "" }
+      opts.options.component_separators = { right = "│", left = "│" }
     end,
   },
 }
